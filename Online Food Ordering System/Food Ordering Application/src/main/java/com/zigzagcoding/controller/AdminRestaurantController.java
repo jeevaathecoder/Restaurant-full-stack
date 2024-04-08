@@ -26,7 +26,7 @@ public class AdminRestaurantController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/")
+    @PostMapping()
     public ResponseEntity<Restaurant> createRestaurant(
             @RequestBody CreateRestaurantRequest req,
             @RequestHeader("Authorization") String jwt
@@ -75,7 +75,7 @@ public class AdminRestaurantController {
     }
 
 
-    @GetMapping("user/")
+    @GetMapping("/user")
     public ResponseEntity<Restaurant> findRestaurantByUserId(
             @RequestHeader("Authorization") String jwt
 
